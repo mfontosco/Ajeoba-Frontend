@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { AiOutlineSearch } from 'react-icons/ai'
 import AdminCards from '../components/Overview/AdminCards';
 import LineChart from '../components/Overview/LineChart'
-import ticketsData from '../data/ticketsData.json'
 import TrendCard from '../components/Overview/TrendCard'
 import UnresolvedTickets from '../components/Overview/UnresolvedTickets'
 import Tasks from '../components/Overview/Tasks'
