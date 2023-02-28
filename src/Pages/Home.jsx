@@ -122,7 +122,7 @@ const Home = () => {
           />
           <TrendCard
             title="Received"
-            num="449"
+            num="426"
           />
          </div>
          <div className='w-full'>
