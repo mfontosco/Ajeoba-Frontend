@@ -1,7 +1,7 @@
 import React from 'react'
 import {BsThreeDotsVertical,BsSortUp} from 'react-icons/bs'
 import {MdFilterAlt} from 'react-icons/md'
-import ticketsData from '../data/ticketsData.json'
+import { ticketsData } from '../Data/ticketsData'
 
 
 
