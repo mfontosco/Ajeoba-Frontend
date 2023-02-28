@@ -8,49 +8,61 @@ const Home = () => {
   const [barChartData, setBarData] = useState();
   const data = {
     labels: [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
       "20",
-      "30",
-      "40",
-      "50",
-      "60",
+      "21",
+      "22"
     ],
     datasets: [
       {
         label: "Today",
-        data: [40, 20, 60, 70, 100, 80],
-        backgroundColor: ["#1F2B5B"],
+        data: [12,35, 45,47,48,50,55,56,54,50,45,35, 35,37,40,45,48,55,60,],
+        backgroundColor: "rgba(75,192192,0.2)",
+        borderColor: "rgb(75,192,192,1)",
+        fill:true
+      },
+      {
+        label: "yesterday",
+        data: [20,10,30,50,20,50,10,60,0,10,30,50,20,50,10,60,0,10,30,50,60],
+        backgroundColor: ["#C5C7CD"],
         borderColor: ["rgb(201, 203, 207)"],
-        borderWidth: 1,
-        barThickness: 10,
-        borderRadius: 10,
+        fill:true
       },
     ],
   }
-  useEffect(() => {
-    setBarData({
-      labels: [
-        "Sep 10",
-        "Sep 11",
-        "Sep 12",
-        "Sep 13",
-        "Sep 14",
-        "Sep 15",
-        "Sep 16",
-      ],
-      datasets: [
-        {
-          label: "",
-          data: [40, 20, 60, 140, 100, 120, 80],
-          backgroundColor: ["#1F2B5B"],
-          borderColor: ["rgb(201, 203, 207)"],
-          borderWidth: 1,
-          barThickness: 10,
-          borderRadius: 10,
-        },
-      ],
-    })
-  }, [])
+  const options = {
+    scales: {
+      yAxes: [{
+       display: true,
+       position: 'right',
+      
+      }, {
+       display: true,
+       position: 'right',
+      }]
+    }
+  };
+  
+
+  
   return (
     <div className="w-full mt-0 lg:mt-14  lg:px-6 px-2   ">
       <div className='grid grid-cols-2 px-2 w-full mt-2 lg:mt-10 items-center h-fit'>
@@ -100,7 +112,7 @@ const Home = () => {
         <div className="col-span-8  md:col-span-6 ">
         <h4>Today's Trend</h4>
         <h6 className="text-[#C5C7CD]">as of 25 May 2019,8:49am</h6>
-        <LineChart data={data} />
+        <LineChart data={data} options={options} />
         </div>
         <div className=" col-span-8 md:col-span-2 flex flex-col items-center justify-center ">
          <div className='w-full'>
@@ -108,32 +120,36 @@ const Home = () => {
             title="Resolved"
             num="449"
           />
-         </div>
-         <div className='w-full'>
-         <TrendCard
-            title="Resolved"
+          <TrendCard
+            title="Received"
             num="449"
           />
          </div>
          <div className='w-full'>
          <TrendCard
-            title="Resolved"
-            num="449"
+            title="Average first response time"
+            num="33m"
+          />
+         </div>
+         <div className='w-full'>
+         <TrendCard
+            title="Resolution with SLA"
+            num="3h 8m"
           />
          </div>
          <div className='w-full'>
          <TrendCard
             title="Resolved"
-            num="449"
+            num="94%"
           />
          </div>
         </div>
       </div>
       <div className="grid grid-cols-8 gap-6  mt-6 mb-4  h-64">
-        <div class="block col-span-8 w-auto md:w-full border border-solid border-blueGray-100 overflow-x-auto col-span-8 md:col-span-4 shadow-sm h-64">
+        <div class="block col-span-8 w-auto md:w-full border rounded-sm border-solid border-blueGray-100 overflow-x-auto col-span-8 md:col-span-4 shadow-sm h-64">
           <UnresolvedTickets/>
         </div>
-        <div class="block col-span-8 w-auto md:w-full border border-solid border-blueGray-100 overflow-x-auto col-span-8 md:col-span-4 shadow-sm h-64">
+        <div class="block col-span-8 w-auto md:w-full rounded-sm  border border-solid border-blueGray-100 overflow-x-auto col-span-8 md:col-span-4 shadow-sm h-64">
         <Tasks/>
         </div>
       </div>

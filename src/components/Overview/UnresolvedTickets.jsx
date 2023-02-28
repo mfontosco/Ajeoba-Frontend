@@ -2,72 +2,81 @@
 
 const UnresolvedTickets =()=>{
     return(
-        <table class="items-center bg-transparent w-full border-collapse ">
-            <thead>
-              <tr >
-                <th className=" bg-blueGray-50  align-middle border border-solid border-blueGray-100 py-2 text-sm  border-l-0 border-r-0 border-t-0 whitespace-nowrap font-semibold text-left  lg:px-10 ">
-                  <h4 className="mb-2"> Unresolved tickets</h4>
-                  <h2 ><span className="text-[#C5C7CD]">Group:</span>Support</h2>
-                </th>
-                <th className=" bg-blueGray-50  align-middle border border-solid border-blueGray-100 py-3 text-xs border-l-0 border-r-0 border-t-0 whitespace-nowrap font-semibold text-left  px-6 sm:px-0">
-                  <a href='#' className="mb-2 text-blue-500">View details</a>
-                </th>
-              </tr>
-            </thead>
+      <table class="items-center bg-transparent rounded-sm w-full border-collapse ">
+      <thead>
+      <tr className='hover:bg-[#F7F8FC] hover:cursor-pointer mb-2 h-23 ml-16  border-0' >
+          <th className="whitespace-nowrap lg:text-sm  text-xs px-6 sm:px-0">
+            <div className="w-full lg:px-10 ">
+            <h2 className="w-4 h-4 ">Unresolved tickets</h2>
+              <h5 className='w-4 h-4 text-xs font-thin mt-2'> Group:<span className="font-thin text-xs">Support</span> </h5>
+              
+            </div>
+          </th>
+          <th className="whitespace-nowrap text-right text-xs lg:text-sm px-6 sm:px-0">
+            <a href="#" className="text-blue-300 font-thin mr-2">view details</a>
+          </th>
+        </tr>
+        <tr className='hover:bg-[#F7F8FC] hover:cursor-pointer mt-2 mb-2 h-22 mb-2 ml-16 border-t-0' >
+          <th className="whitespace-nowrap lg:text-sm  text-xs px-6 sm:px-0">
+            <div className="w-full lg:px-10 ">
+            <h2 className="w-4 h-4 font-normal ">Waiting on feature request</h2>
+              
+              
+            </div>
+          </th>
+          <th className="whitespace-nowrap text-right text-xs lg:text-sm px-6 sm:px-0">
+            <div className="font-normal px-3 mt-4">
+             4238
+            </div>
+          </th>
+        </tr>
+      </thead>
 
 
-            <tbody className=' h-[6rem] border-b-2'>
-              <tr className='lg:px-10 px-3 hover:bg-[#F7F8FC] hover:cursor-pointer border border-solid border-blueGray-100  ml-16' >
-                <td className="whitespace-nowrap lg:text-sm  text-xs px-6 sm:px-0">
-                  <div>
-                    <p className='lg:px-10 '> Waiting on Feature Request </p>
-                  </div>
-                </td>
-                <td className="whitespace-nowrap text-xs lg:text-sm px-6 sm:px-0">
-                  <div>
-                    <p className='py-3 '> 4321 </p>
-                  </div>
-                </td>
-              </tr>
-              <tr className='hover:bg-[#F7F8FC]  ml-16 border border-solid border-blueGray-100 hover:cursor-pointer' >
-                <td className="whitespace-nowrap lg:text-sm  text-xs px-6 sm:px-0">
-                  <div>
-                    <p className='py-3 px-3 lg:px-10'>Awaiting Customer Response </p>
-                  </div>
-                </td>
-                <td className="whitespace-nowrap text-xs lg:text-sm px-6 sm:px-0">
-                  <div>
-                    <p className=''> 1005 </p>
-                  </div>
-                </td>
-              </tr>
-              <tr className='hover:bg-[#F7F8FC]  ml-16 border border-solid border-blueGray-100 hover:cursor-pointer' >
-                <td className="whitespace-nowrap lg:text-sm  text-xs px-6 sm:px-0">
-                  <div>
-                    <p className='py-3 px-3 lg:px-10'> Awaiting developer fix </p>
-                  </div>
-                </td>
-                <td className="whitespace-nowrap text-xs lg:text-sm px-6 sm:px-0">
-                  <div>
-                    <p className=''> 914 </p>
-                  </div>
-                </td>
-              </tr>
-              <tr className='hover:bg-[#F7F8FC] border-b-none  ml-16 border border-solid border-blueGray-100 hover:cursor-pointer' >
-                <td className="whitespace-nowrap lg:text-sm  text-xs px-6 sm:px-0">
-                  <div>
-                    <p className='py-3 px-3 lg:px-10'> Waiting on Feature Request </p>
-                  </div>
-                </td>
-                <td className="whitespace-nowrap text-xs lg:text-sm px-6 sm:px-0">
-                  <div>
-                    <p className=''>281 </p>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
+      <tbody className=' h-[6rem] border-b-2'>
+        <tr className='hover:bg-[#F7F8FC] hover:cursor-pointer  h-14 ml-16 border border-solid border-blueGray-100' >
+          <td className="whitespace-nowrap lg:text-sm  text-xs px-6 sm:px-0">
+            <div className="flex items-center lg:px-10">
+           
+              <p className=''> Awaiting customer response  </p>
+            </div>
+          </td>
+          <td className="whitespace-nowrap text-right text-xs lg:text-sm px-6 sm:px-0">
+            <div className="px-3">
+             1005
+            </div>
+          </td>
+        </tr>
+        <tr className='hover:bg-[#F7F8FC] hover:cursor-pointer h-14 ml-16 border border-solid border-blueGray-100' >
+          <td className="whitespace-nowrap lg:text-sm  text-xs px-6 sm:px-0">
+            <div className="flex items-center lg:px-10">
+           
+              <p className=''>Awaiting Developer Fix </p>
+            </div>
+          </td>
+          <td className="whitespace-nowrap text-right text-xs lg:text-sm px-6 sm:px-0">
+            <div className="px-3">
+             914
+            </div>
+          </td>
+        </tr>
+        <tr className='hover:bg-[#F7F8FC] hover:cursor-pointer h-14 ml-16  border-b-0 ' >
+          <td className="whitespace-nowrap lg:text-sm  text-xs px-6 sm:px-0">
+            <div className="flex items-center lg:px-10">
+           
+              <p className=''>Pending</p>
+            </div>
+          </td>
+          <td className="whitespace-nowrap text-right text-xs lg:text-sm px-6 sm:px-0">
+            <div className="px-3">
+             281
+            </div>
+          </td>
+        </tr>
+      </tbody>
 
-          </table>
+    </table>
+
     )
 
 
