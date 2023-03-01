@@ -4,10 +4,10 @@ const UnresolvedTickets =()=>{
     return(
       <table class="items-center bg-transparent rounded-sm w-full border-collapse ">
       <thead>
-      <tr className='hover:bg-[#F7F8FC] hover:cursor-pointer mb-2 h-23 ml-16  border-0' >
+      <tr className='hover:bg-[#F7F8FC] hover:cursor-pointer py-2 mb-2 h-22 ml-16  border-0' >
           <th className="whitespace-nowrap lg:text-sm  text-xs px-6 sm:px-0">
             <div className="w-full lg:px-10 ">
-            <h2 className="w-4 h-4 ">Unresolved tickets</h2>
+            <h2 className="w-4 h-5 ">Unresolved tickets</h2>
               <h5 className='w-4 h-4 text-xs font-thin mt-2'> Group:<span className="text-xs text-black font-normal text-xs">Support</span> </h5>
               
             </div>
@@ -16,7 +16,7 @@ const UnresolvedTickets =()=>{
             <a href="#" className="text-blue-300 font-thin mr-2">view details</a>
           </th>
         </tr>
-        <tr className='hover:bg-[#F7F8FC] hover:cursor-pointer mt-2  h-22 mb-3 ml-16 border-t-0' >
+        <tr className='hover:bg-[#F7F8FC] hover:cursor-pointer mt-2  h-22 mb-3 ml-16 border-t-0 ' >
           <th className="whitespace-nowrap lg:text-sm  text-xs px-6 sm:px-0">
             <div className="w-full lg:px-10 ">
             <h2 className="w-4 h-4 font-normal ">Waiting on feature request</h2>
@@ -31,7 +31,7 @@ const UnresolvedTickets =()=>{
       </thead>
 
 
-      <tbody className=' h-[6rem] border-b-2'>
+      <tbody className=' h-[6rem] '>
         <tr className='hover:bg-[#F7F8FC] hover:cursor-pointer  h-14 ml-16 border border-solid border-blueGray-100' >
           <td className="whitespace-nowrap lg:text-sm  text-xs px-6 sm:px-0">
             <div className="flex items-center lg:px-10">

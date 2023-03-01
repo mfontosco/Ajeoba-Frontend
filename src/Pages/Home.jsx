@@ -35,31 +35,31 @@ const Home = () => {
       {
         label: "Today",
         data: [12,35, 45,47,48,50,55,56,54,50,45,35, 35,37,40,45,48,55,60,],
-        backgroundColor: "rgba(75,192192,0.2)",
+        backgroundColor: "rgb(239,241,255,0.2)",
         borderColor: "rgb(75,192,192,1)",
         fill:true
       },
       {
         label: "yesterday",
-        data: [20,10,30,50,20,50,10,60,0,10,30,50,20,50,10,60,0,10,30,50,60],
-        backgroundColor: ["#C5C7CD"],
-        borderColor: ["rgb(201, 203, 207)"],
-        fill:true
+        data: [40,45,46,50,55,50,45,35,30,33,33,33,35,40,10,60,0,10,30,50,60],
+        borderColor: ["#742774"],
+        fill:false
       },
     ],
   }
-  const options = {
-    scales: {
-      yAxes: [{
-       display: true,
-       position: 'right',
-      
-      }, {
-       display: true,
-       position: 'right',
-      }]
-    }
-  };
+  // const options = {
+  //   scales: {
+  //     y: {
+  //       beginAtZero:true,
+  //      match:{
+  //       beginAtZero:true,
+  //       type:'linear',
+  //      display: true,
+  //      position: 'right',
+  //      } 
+  //     };
+    
+  // }};
   
 
   
@@ -112,7 +112,7 @@ const Home = () => {
         <div className="col-span-8  md:col-span-6 ">
         <h4>Today's Trend</h4>
         <h6 className="text-[#C5C7CD]">as of 25 May 2019,8:49am</h6>
-        <LineChart data={data} options={options} />
+        <LineChart data={data}  />
         </div>
         <div className=" col-span-8 md:col-span-2 flex flex-col items-center justify-center ">
          <div className='w-full'>
