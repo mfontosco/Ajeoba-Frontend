@@ -26,7 +26,7 @@ const Tasks =()=>{
             </th>
             <th className="whitespace-nowrap text-right text-xs lg:text-sm px-6 sm:px-0">
               <div className=" px-3 mt-4">
-                <button className='rounded-md text-right  border bg-gray-500 py-1 px-2 shadow-sm text-xs'> + </button>
+                <button className='rounded-md text-right  border bg-gray-200 py-1 px-2 shadow-sm text-xs'> + </button>
               </div>
             </th>
           </tr>
