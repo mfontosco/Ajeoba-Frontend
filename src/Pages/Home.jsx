@@ -34,17 +34,16 @@ const Home = () => {
     datasets: [
       {
         label: "Today",
-        data: [30,35, 45,47,48,50,55,56,54,50,45,35, 35,37,40,45,48,],
-      
+        data: [30,35, 45,47,48,50,55,56,54,50,45,35, 35,37,40,45,48,49,50,52],
         borderColor: "rgb(75,192,192,1)",
         fill:true
       },
       {
         label: "yesterday",
-        data: [40,45,46,50,55,50,45,35,30,0,33,33,10,35,25,15,],
-        borderColor: ["#742774"],
-        backgroundColor: "rgb(239,241,255,0.2)",
-        fill:true
+        data: [40,45,46,50,55,50,45,35,30,0,33,33,10,35,25,15,20,30,40,50],
+        borderColor: ["#ECF2FF"],
+        backgroundColor: "#ECF2FF",
+        fill:false
       },
     ],
   }
