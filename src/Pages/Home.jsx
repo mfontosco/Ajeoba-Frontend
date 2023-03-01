@@ -34,32 +34,43 @@ const Home = () => {
     datasets: [
       {
         label: "Today",
-        data: [12,35, 45,47,48,50,55,56,54,50,45,35, 35,37,40,45,48,55,60,],
-        backgroundColor: "rgb(239,241,255,0.2)",
+        data: [30,35, 45,47,48,50,55,56,54,50,45,35, 35,37,40,45,48,],
+      
         borderColor: "rgb(75,192,192,1)",
         fill:true
       },
       {
         label: "yesterday",
-        data: [40,45,46,50,55,50,45,35,30,33,33,33,35,40,10,60,0,10,30,50,60],
+        data: [40,45,46,50,55,50,45,35,30,33,33,10,35,25,15,20,50],
         borderColor: ["#742774"],
-        fill:false
+        backgroundColor: "rgb(239,241,255,0.2)",
+        fill:true
       },
     ],
   }
-  // const options = {
-  //   scales: {
-  //     y: {
-  //       beginAtZero:true,
-  //      match:{
-  //       beginAtZero:true,
-  //       type:'linear',
-  //      display: true,
-  //      position: 'right',
-  //      } 
-  //     };
-    
-  // }};
+   const options = {
+    responsive: true,
+    interaction: {
+      mode: 'index',
+      intersect: false,
+    },
+    stacked: false,
+    scales: {
+      y: {
+        type: 'linear',
+        display: true,
+        position: 'right',
+      },
+     x:{
+      grid: {
+        drawOnChartArea: false,
+      },
+     }
+    },
+  };
+  
+
+  
   
 
   
@@ -110,9 +121,9 @@ const Home = () => {
       </div>
       <div className="grid grid-cols-8 gap-6 border rounded mt-6 mb-4">
         <div className="col-span-8  md:col-span-6 ">
-        <h4>Today's Trend</h4>
-        <h6 className="text-[#C5C7CD]">as of 25 May 2019,8:49am</h6>
-        <LineChart data={data}  />
+        <h4 className="text-sm font-medium px-4 py-2">Today's Trend</h4>
+        <h6 className="text-[#C5C7CD] text-xs px-4">as of 25 May 2019,8:49am</h6>
+        <LineChart data={data} options={options} />
         </div>
         <div className=" col-span-8 md:col-span-2 flex flex-col items-center justify-center ">
          <div className='w-full'>
